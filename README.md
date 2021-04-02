@@ -22,7 +22,8 @@ Its 2 datasets of files containing the Songs Datasets and Log Dataset
 
 **Song Datasets**: the .json files are stored under /data/song_data. Example:
 
-```{"num_songs":1, "artist_id":"ARD7TVE1187B99BFB1", "artist_latitude":null, "artist_longitude":null, "artist_location":"California - LA", "artist_name":"Casual" ,"song_id":"SOMZWCG12A8C13C480", "title":"I Didn't Mean To", "duration":218.93179, "year":0}
+```
+{"num_songs":1, "artist_id":"ARD7TVE1187B99BFB1", "artist_latitude":null, "artist_longitude":null, "artist_location":"California - LA", "artist_name":"Casual" ,"song_id":"SOMZWCG12A8C13C480", "title":"I Didn't Mean To", "duration":218.93179, "year":0}
 ```
 
 **Log Datasets**: the .json files are stored under /data/log_data. Example:
@@ -32,3 +33,21 @@ Its 2 datasets of files containing the Songs Datasets and Log Dataset
 ```
 
 ## Database Schema
+
+For this project it was user a Star Schema 
+One main fact table (songs_play) and 4 dimensional tables (*songs*, *artists*, *users* and *time*)
+
+The reason for a ralational database:
+
+- The data types are structured.
+- Small amount of data to analyze and dont require big data solutions.
+- This structure will enable the analysts to aggregate the data efficiently.
+- Ability to use SQL.
+- We need to use JOINS for this project.
+
+s
+## How to Run
+
+1. Run create_tables.py from terminal to set up the database and tables.
+2. Run etl.py from terminal to process and load data into the database.
+3. Launch test.ipynb to run validation and example queries.
